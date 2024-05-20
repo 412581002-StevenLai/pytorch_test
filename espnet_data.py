@@ -142,6 +142,7 @@ def get_test_wav_inf(directory):
     for file in os.listdir(directory):
         if file.endswith(".wav"):
             utt_id = get_ts_utt_id(id)
+            # utt_id, ext = os.path.splitext(file)
             id+=1
             wav_inf[utt_id] = {}
             wav_inf[utt_id]["location"] = os.path.join(directory, file)
